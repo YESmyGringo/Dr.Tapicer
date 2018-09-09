@@ -1,3 +1,58 @@
 body{
-    background: pink;
+    width: 100vw;
+    height: 100vw;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(3, 1fr);
+    grid-template-areas: "navigation navigation navigation"
+                        "header header header"
+                        "about-us about-us about-us"
+                        ". image ."
+                        "contact contact contact"
+                        "footer footer footer";
+}
+/* ------ NAVIGATION ------ */
+.navigation{
+    grid-area: navigation;
+    position: fixed;
+}
+.navigation ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: #333;
+}
+.navigation li{
+    float: left;
+}
+.navigation li a{
+    display: block;
+    color: fuchsia;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navigation li a:hover{
+    background: #111;
+}
+/* ------ HEADER ------- */
+.header{
+    grid-area: header;
+}
+
+.about-us{
+    grid-area: about-us;
+}
+
+.image{
+    grid-area: image;
+}
+
+.contact{
+    grid-area: contact;
+}
+
+.footer{
+    grid-area: footer;
 }
